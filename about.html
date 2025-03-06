@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+     <!-- Navbar -->
+     <nav class="church-navbar">
+        <div class="church-logo">
+            <a href="./index.html">
+                <img src="./images/logo (1).png" alt="JCAM Church Logo">
+                <span>JCAM <strong>CHURCH</strong></span>
+            </a>
+        </div>
+        <div class="church-nav-line">
+            <ul class="church-nav-links">
+                <li><a href="./about.html">Experience</a></li>
+                <li><a href="#">Next Steps</a></li>
+                <li><a href="./messages.html">Messages</a></li>
+                <li><a href="./locations.html">Locations</a></li>
+            </ul>
+        </div>
+        <div class="church-nav-buttons">
+            <button class="church-give-btn">Give</button>
+            <button class="church-visit-btn">Plan Your Visit</button>
+        </div>
+        <div class="church-hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector(".church-nav-links").classList.toggle("active");
+        }
+        
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll(".church-nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.querySelector(".church-nav-links").classList.remove("active");
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+    <section class="about-banner">
+        <div class="about-content">
+            <h1 class="about-title">About JCAM</h1>
+            <p class="about-description">We help people take the next step in their relationship with Jesus. That’s how we’re going to make a difference, and it’s the motivation behind everything we do.</p>
+            <button class="about-button">Plan Your Visit</button>
+        </div>
+        <div class="about-image">
+            <img src="./images/full-shot-happy-christian-family-church.jpg" alt="Church Service" class="about-image-img">
+        </div>
+    </section>
+
+
+
+    <section class="about-pastors">
+        <div class="about-pastors-image">
+            <img src=".//images/medium-shot-man-reading-bible.jpg" alt="Jason & Lis Burns" class="about-pastors-img">
+        </div>
+        <div class="about-pastors-content">
+            <h2 class="about-pastors-subtitle">OUR LEAD PASTORS</h2>
+            <h1 class="about-pastors-title">Jason & Lis Burns</h1>
+            <p class="about-pastors-description">
+                Dr. Jason and Lis Burns are the founding and lead pastors of Access Church. In 2007, Jason and Lis started Access as a college Bible study in their living room, with 15 friends. Today, thousands of people in Central Florida call Access Church their home. Jason and Lis have three children and live in Lakeland, Florida. Jason recently completed his Doctorate in Ministry at Southeastern University and Lis is currently pursuing a Masters of Arts in ministry degree.
+            </p>
+            <div class="about-pastors-signature">Jason & Lis Burns</div>
+            <div class="about-pastors-social">
+                <h3 class="about-pastors-social-title">Connect with Jason</h3>
+                <div class="about-pastors-social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <h3 class="about-pastors-social-title">Connect with Lis</h3>
+                <div class="about-pastors-social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="about-next-step">
+        <div class="about-next-step-content">
+            <h1 class="about-next-step-title">Your Next Step</h1>
+            <p class="about-next-step-description">
+                Wherever you are in life, you matter and you have a purpose. Your journey has a next step, and we’ll help you find it. We want to help you become the person God has created you to be. It could start with serving, giving, or joining us regularly.
+            </p>
+            <img src="./images/full-shot-happy-christian-family-church.jpg" alt="Person Speaking" class="about-next-step-img-left">
+        </div>
+        <div class="about-next-step-media">
+            <img src="./images/medium-shot-man-reading-bible.jpg" alt="Pastor Preaching" class="about-next-step-img-right">
+            <p class="about-next-step-note">
+                You don’t have to take the next step alone. With a strong community of friends, you can laugh, grow, and serve with people who genuinely care about you.
+            </p>
+            <button class="about-next-step-button">Find Your Next Step</button>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="about-history">
+        <div class="about-history-container">
+            <h1 class="about-history-title">Our Journey</h1>
+            <div class="about-history-grid">
+                <div class="about-history-card">
+                    <img src="./images/2007-group.jpg" alt="2007 Group" class="about-history-img">
+                    <div class="about-history-content">
+                        <h2 class="about-history-year">2007</h2>
+                        <p class="about-history-text">
+                            A group of fifteen Lakelanders felt a need. They wanted a great environment to meet with friends to explore questions about God without religious lingo or assumptions, ensuring no one felt singled out.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-history-card">
+                    <img src="./images/2009-2020-group.jpg" alt="2009–2020 Group" class="about-history-img">
+                    <div class="about-history-content">
+                        <h2 class="about-history-year">2009–2020</h2>
+                        <p class="about-history-text">
+                            Access became a church, growing through authentic community and honest conversations, always asking, “Where is God taking us next?”
+                        </p>
+                    </div>
+                </div>
+                <div class="about-history-card">
+                    <img src="./images/2021-present-group.jpg" alt="2021–Present Group" class="about-history-img">
+                    <div class="about-history-content">
+                        <h2 class="about-history-year">2021–Present</h2>
+                        <p class="about-history-text">
+                            After tremendous growth, Access bought a new building in North Lakeland, launching our North Lakeland Location on August 25, 2024, to reach more people.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="about-beliefs">
+        <div class="about-beliefs-wrapper">
+            <h1 class="about-beliefs-title">Our Beliefs</h1>
+            <div class="about-beliefs-grid">
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-1">Jesus is God’s Son.</h2>
+                    <p class="about-beliefs-description hidden" id="description-1"></p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-2">The Bible is God’s Word.</h2>
+                    <p class="about-beliefs-description hidden" id="description-2">
+                        We believe the entire Bible is the inspired and infallible Word of God. It cannot be added to, subtracted from, or superseded in any regard. It, alone, is the final authority in determining all doctrinal truths. Proverbs 30:5-6, 2 Timothy 3:16, 2 Peter 1:20-21
+                    </p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-3">The Holy Spirit.</h2>
+                    <p class="about-beliefs-description hidden" id="description-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam!</p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-4">Jesus Saves.</h2>
+                    <p class="about-beliefs-description hidden" id="description-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, optio!</p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-5">The Local Church.</h2>
+                    <p class="about-beliefs-description hidden" id="description-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ullam?</p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-6">God is Our Father.</h2>
+                    <p class="about-beliefs-description hidden" id="description-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, unde.</p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-7">Man is Fallen.</h2>
+                    <p class="about-beliefs-description hidden" id="description-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sit?</p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-8">Living for God.</h2>
+                    <p class="about-beliefs-description hidden" id="description-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, at!</p>
+                </div>
+                <div class="about-beliefs-item">
+                    <h2 class="about-beliefs-heading" data-target="description-9">Jesus’ Return.</h2>
+                    <p class="about-beliefs-description hidden" id="description-9">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quaerat!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headings = document.querySelectorAll('.about-beliefs-heading');
+        
+            headings.forEach(heading => {
+                heading.addEventListener('click', () => {
+                    const targetId = heading.getAttribute('data-target');
+                    const description = document.getElementById(targetId);
+        
+                    // Hide all descriptions
+                    document.querySelectorAll('.about-beliefs-description').forEach(desc => {
+                        desc.classList.remove('visible');
+                        desc.classList.add('hidden');
+                    });
+        
+                    // Toggle the clicked description
+                    if (description) {
+                        description.classList.remove('hidden');
+                        description.classList.add('visible');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <footer class="custom-footer">
+        <div class="custom-invite">
+            <h2>We’d love to see you this weekend!</h2>
+            <p>Let us know you’re coming! We will save you a seat.</p>
+            <button class="custom-invite-btn">Let Us Know You’re Coming</button>
+        </div>
+    
+        <div class="custom-footer-content">
+            <div class="custom-footer-column">
+                <div class="custom-footer-logo">
+                    <img src="your-logo.png" alt="Access Church Logo">
+                </div>
+                <ul>
+                    <li><h4>Learn More</h4></li>
+                    <li><a href="#">About Access</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Youth</a></li>
+                    <li><a href="#">Young Adults</a></li>
+                </ul>
+            </div>
+    
+            <div class="custom-footer-column">
+                <ul>
+                    <li><h4>Join Us</h4></li>
+                    <li><a href="#">Plan Your Visit</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Service Guides</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+    
+            <div class="custom-footer-column">
+                <ul>
+                    <li><h4>Next Steps</h4></li>
+                    <li><a href="#">Baptism</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Next Steps Class</a></li>
+                    <li><a href="#">Serve</a></li>
+                    <li><a href="#">Legacy</a></li>
+                </ul>
+            </div>
+    
+            <div class="custom-footer-column">
+                <ul>
+                    <li><h4>Messages</h4></li>
+                    <li><a href="#">Latest Message</a></li>
+                    <li><a href="#">All Messages</a></li>
+                    <li><a href="#">Watch Live</a></li>
+                    <li><a href="#">Podcast</a></li>
+                </ul>
+            </div>
+    
+            <div class="custom-footer-column">
+                <h4>Subscribe</h4>
+                <p>Join our newsletter to stay up to date on latest messages and upcoming events.</p>
+                <input type="email" placeholder="Email">
+                <button class="custom-subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+    
+        <p class="custom-footer-copyright">© 2024 Access Church</p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
