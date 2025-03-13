@@ -13,12 +13,17 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="./images/JCAM_CHURCH_ TRANSPARENT .png" alt="Access Church Logo" class="logo-img">
-            
+            <img src="logo.png" alt="Access Church Logo" class="logo-img">
+            <span>ACCESSCHURCH</span>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <ul class="nav-links">
             <li class="dropdown">
-                <a href="#" class="dropbtn">Experience ▼</a>
+                <a href="#" class="dropbtn">Experience <span class="arrow-down"></span></a>
                 <div class="dropdown-content">
                     <a href="#">Learn More</a>
                     <a href="#">About</a>
@@ -28,7 +33,7 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropbtn">Next Steps ▼</a>
+                <a href="#" class="dropbtn">Next Steps <span class="arrow-down"></span></a>
                 <div class="dropdown-content">
                     <a href="#">Ministries</a>
                     <a href="#">Kids</a>
@@ -36,41 +41,58 @@
                     <a href="#">Young Adults</a>
                 </div>
             </li>
-            <li><a href="#">Messages</a></li>
             <li class="dropdown">
-                <a href="#" class="dropbtn">Locations ▼</a>
+                <a href="#" class="dropbtn">Messages <span class="arrow-down"></span></a>
                 <div class="dropdown-content">
                     <a href="#">Events</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Locations <span class="arrow-down"></span></a>
+                <div class="dropdown-content">
                     <a href="#">Contact</a>
                 </div>
             </li>
-            <li><a href="#" class="give-btn">Give</a></li>
-            <li><a href="#" class="visit-btn">Plan Your Visit</a></li>
+            <li class="nav-buttons">
+                <button class="give-btn">Give</button>
+                <button class="visit-btn">Plan Your Visit</button>
+            </li>
         </ul>
-        <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </nav>
-
   <script>
-    // Toggle mobile menu
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+    // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-});
+    // Hamburger menu toggle
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
 
-// Toggle dropdown on mobile
-const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach(dropdown => {
-    dropdown.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
+    // Dropdown toggle for mobile
+    dropdowns.forEach(dropdown => {
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        dropbtn.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault(); // Prevent default link behavior on mobile
+                const wasActive = dropdown.classList.contains('active');
+                dropdowns.forEach(d => d.classList.remove('active')); // Close other dropdowns
+                if (!wasActive) {
+                    dropdown.classList.add('active'); // Toggle current dropdown
+                }
+            }
+        });
+    });
+
+    // Close mobile menu and dropdowns when resizing to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            dropdowns.forEach(d => d.classList.remove('active')); // Close all dropdowns
         }
     });
 });
