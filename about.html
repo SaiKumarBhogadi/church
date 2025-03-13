@@ -3,48 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JCAM | About</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/x-icon" href="images/logo (1).png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
-    
-     <!-- Navbar -->
-     <nav class="church-navbar">
-        <div class="church-logo">
-            <a href="./index.html">
-                <img src="./images/logo (1).png" alt="JCAM Church Logo">
-                <span>JCAM <strong>CHURCH</strong></span>
+    <nav class="navbar navbar-expand-lg bg-light shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/JCAM_CHURCH_ TRANSPARENT .png" alt="Logo">
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="experienceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Experience
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
+                            <li><a class="dropdown-item" href="./about.html">About</a></li>
+                            <li><a class="dropdown-item" href="./what_to_expect.html">What to Except</a></li>
+                            <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="./leadership.html">Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./messages.html">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./locations.html">Locations</a>
+                    </li>
+                </ul>
+                <div class="navbar-buttons d-flex">
+                    <a href="#" class="btn btn-primary">Give</a>
+                    <a href="./plan_to_visit.html" class="btn btn-outline-primary">Plan Your Visit</a>
+                </div>
+            </div>
         </div>
-        <div class="church-nav-line">
-            <ul class="church-nav-links">
-                <li><a href="./about.html">Experience</a></li>
-                <li><a href="#">Next Steps</a></li>
-                <li><a href="./messages.html">Messages</a></li>
-                <li><a href="./locations.html">Locations</a></li>
-            </ul>
-        </div>
-        <div class="church-nav-buttons">
-            <button class="church-give-btn">Give</button>
-            <button class="church-visit-btn">Plan Your Visit</button>
-        </div>
-        <div class="church-hamburger" onclick="toggleMenu()">☰</div>
     </nav>
-    
-    <script>
-        function toggleMenu() {
-            document.querySelector(".church-nav-links").classList.toggle("active");
-        }
-        
-        // Close mobile menu when clicking a nav link
-        document.querySelectorAll(".church-nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                document.querySelector(".church-nav-links").classList.remove("active");
-            });
-        });
-    </script>
 
 
 
