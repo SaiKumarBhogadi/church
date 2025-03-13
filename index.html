@@ -1,133 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="./index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="church-navbar">
-        <div class="church-logo">
-            <a href="./index.html">
-                <img src="./images/logo (1).png" alt="JCAM Church Logo">
-                <span>JCAM <strong>CHURCH</strong></span>
-            </a>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/JCAM_CHURCH_ TRANSPARENT .png" alt="Access Church Logo" class="logo-img">
+            
         </div>
-        <div class="church-nav-line">
-            <ul class="church-nav-links">
-                <li><a href="./about.html">Experience</a></li>
-                <li><a href="#">Next Steps</a></li>
-                <li><a href="./messages.html">Messages</a></li>
-                <li><a href="./locations.html">Locations</a></li>
-            </ul>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Experience ▼</a>
+                <div class="dropdown-content">
+                    <a href="#">Learn More</a>
+                    <a href="#">About</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">What To Expect</a>
+                    <a href="#">Plan Your Visit</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Next Steps ▼</a>
+                <div class="dropdown-content">
+                    <a href="#">Ministries</a>
+                    <a href="#">Kids</a>
+                    <a href="#">Youth</a>
+                    <a href="#">Young Adults</a>
+                </div>
+            </li>
+            <li><a href="#">Messages</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Locations ▼</a>
+                <div class="dropdown-content">
+                    <a href="#">Events</a>
+                    <a href="#">Contact</a>
+                </div>
+            </li>
+            <li><a href="#" class="give-btn">Give</a></li>
+            <li><a href="#" class="visit-btn">Plan Your Visit</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="church-nav-buttons">
-            <button class="church-give-btn">Give</button>
-            <button class="church-visit-btn">Plan Your Visit</button>
-        </div>
-        <div class="church-hamburger" onclick="toggleMenu()">☰</div>
     </nav>
-    
-    <script>
-        function toggleMenu() {
-            document.querySelector(".church-nav-links").classList.toggle("active");
+
+  <script>
+    // Toggle mobile menu
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+// Toggle dropdown on mobile
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
         }
-        
-        // Close mobile menu when clicking a nav link
-        document.querySelectorAll(".church-nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                document.querySelector(".church-nav-links").classList.remove("active");
-            });
-        });
-    </script>
-    
+    });
+});
+  </script>
     
     <!-- Banner Section -->
-    <header class="banner">
+    <!-- <header class="banner">
         <video autoplay muted loop id="background-video">
-            <source src="./0_Church_Altar_3840x2160.mp4" type="video/mp4">
+            <source src="./images/header.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="banner-content">
             <h3>WELCOME TO ACCESS CHURCH</h3>
             <h1>A Church That Feels Like Home</h1>
         </div>
+    </header> -->
+
+    <header class="banner">
+        <video autoplay muted loop id="background-video-large">
+            <source src="./images/header.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
     </header>
 
 
+
+
     <section class="video-section">
-        <div class="video-container">
-            <iframe src="https://youtu.be/odmkeTh4tvc?si=AhEx6QwpmLC2QLpS" frameborder="0" allowfullscreen></iframe>
+        <div class="image-wrapper">
+            <img src="./images/closer.jpg" alt="Church Community">
         </div>
-        <div class="text-container">
-            <h2>We help people take the next step in their relationship with Jesus.</h2>
-            <p>Watch our most recent messages and be inspired to grow in faith. Join us live or catch up on past sermons.</p>
+        <div class="text-wrapper">
+            <h2>Step Closer to Jesus</h2>
+            <p>Join our community and explore sermons that uplift and guide your spiritual journey.</p>
+            <button class="watch-btn">Join Now</button>
         </div>
     </section>
 
-    
-    <section class="video-section">
-        
-        <div class="text-container">
-            <h2>We help people take the next step in their relationship with Jesus.</h2>
-            <p>Watch our most recent messages and be inspired to grow in faith. Join us live or catch up on past sermons.</p>
-        </div>
+    <section class="video-section alternate">
+        <div class="text-wrapper">
+            <h2>Grow in Faith Together</h2>
+            <p>Discover inspiring messages to deepen your faith. Watch live or revisit past sermons anytime.</p>
 
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-        </div>
 
-        
+            <button class="watch-btn">Watch Now</button>
+        </div>
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline>
+                <source src="./images/5410844_Coll_wavebreak_Moon_1280x720.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </section>
+
 
     <div class="church-slider">
-    <div class="church-wrapper">
-        <h1 class="church-title">Visit Access</h1>
-        <p class="church-description">Join us every Sunday at one of our locations!</p>
-        <div class="church-carousel">
-            <div class="church-carousel-track">
-                <div class="church-card">
-                    <img src="./images/full-shot-happy-christian-family-church.jpg" alt="North Lakeland Location">
-                    <button class="church-button">Get Directions</button>
-                    <h3>North Lakeland</h3>
-                    <p>9:30 AM + 11 AM<br>2620 Kathleen Road, Lakeland, FL 33810</p>
+        <div class="church-wrapper">
+            <h1 class="church-title">Visit Access</h1>
+            <p class="church-description">Join us every Sunday at one of our locations!</p>
+            <div class="church-carousel">
+                <div class="church-carousel-track">
+                    <div class="church-card">
+                        <img src="./images/church1.jpg" alt="North Lakeland Location">
+                        <button class="church-button">Get Directions</button>
+                        <h3>St. Joseph's Cathedral</h3>
+                        <p>6:00 AM (English)<br>Gunfoundry, Abids, Hyderabad, Telangana, India.</p>
+                    </div>
+                    <div class="church-card">
+                        <img src="./images/church2.jpg" alt="Bartow Location">
+                        <button class="church-button">Centenary Methodist Church</button>
+                        <h3>Bartow</h3>
+                        <p>6:00 AM (Telugu)
+
+                            7:30 AM (English)
+                            
+                            7:30 AM (Hindi)
+                            
+                            9:00 AM (Kannada)
+                            
+                           <br>Chapel Road, Abids, Hyderabad, Telangana, India.</p>
+                    </div>
+                    <div class="church-card">
+                        <img src="./images/church3.jpeg" alt="Online Services">
+                        <button class="church-button">Watch Messages Online</button>
+                        <h3>St. Mary's Basilica</h3>
+                        <p>6:00 AM (English)
+
+                            6:00 PM (English)<br>Sarojini Naidu Road, Secunderabad, Telangana, India.</p>
+                    </div>
+                    <div class="church-card">
+                        <img src="./images/church4.jpeg" alt="North Lakeland Location">
+                        <button class="church-button">Get Directions</button>
+                        <h3>All Saints Church</h3>
+                        <p>8:00 AM (English)
+
+                            9:30 AM (Telugu)<br>Trimulgherry, Secunderabad, Telangana, India.</p>
+                    </div>
+                    <div class="church-card">
+                        <img src="./images/church5.jpg" alt="Bartow Location">
+                        <button class="church-button">Join The Launch Team</button>
+                        <h3>St. George's Church</h3>
+                        <p>7:30 AM (English)
+
+                            9:30 AM (Telugu)<br>Near Clock Tower, Secunderabad, Telangana, India.</p>
+                    </div>
                 </div>
-                <div class="church-card">
-                    <img src="bartow.jpg" alt="Bartow Location">
-                    <button class="church-button">Join The Launch Team</button>
-                    <h3>Bartow</h3>
-                    <p>Grand Opening: March 30<br>915 S Broadway Ave, Bartow, FL 33830</p>
-                </div>
-                <div class="church-card">
-                    <img src="online.jpg" alt="Online Services">
-                    <button class="church-button">Watch Messages Online</button>
-                    <h3>Online</h3>
-                    <p>9 AM + 10:30 AM<br>Watch live on Facebook and YouTube</p>
-                </div>
-                <div class="church-card">
-                    <img src="./images/full-shot-happy-christian-family-church.jpg" alt="North Lakeland Location">
-                    <button class="church-button">Get Directions</button>
-                    <h3>North Lakeland</h3>
-                    <p>9:30 AM + 11 AM<br>2620 Kathleen Road, Lakeland, FL 33810</p>
-                </div>
-                <div class="church-card">
-                    <img src="bartow.jpg" alt="Bartow Location">
-                    <button class="church-button">Join The Launch Team</button>
-                    <h3>Bartow</h3>
-                    <p>Grand Opening: March 30<br>915 S Broadway Ave, Bartow, FL 33830</p>
-                </div>
+                <button class="church-prev-btn">←</button>
+                <button class="church-next-btn">→</button>
             </div>
-            <button class="church-prev-btn">←</button>
-            <button class="church-next-btn">→</button>
         </div>
     </div>
-</div>
-    
-    
+
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -137,40 +195,40 @@
             const nextBtn = document.querySelector('.church-next-btn');
             let currentIndex = 0;
             let cardWidth = cards[0].offsetWidth + 20; // Including gap
-        
+
             function updateCarousel() {
                 const visibleCards = getVisibleCards();
                 const maxIndex = cards.length - visibleCards;
                 currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
                 track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
             }
-        
+
             function getVisibleCards() {
                 if (window.innerWidth <= 768) return 1;
                 if (window.innerWidth <= 1024) return 2;
                 return 3;
             }
-        
+
             function updateCardWidth() {
                 cardWidth = cards[0].offsetWidth + 20; // Recalculate width on resize, including gap
                 updateCarousel();
             }
-        
+
             prevBtn.addEventListener('click', () => {
                 currentIndex--;
                 updateCarousel();
             });
-        
+
             nextBtn.addEventListener('click', () => {
                 currentIndex++;
                 updateCarousel();
             });
-        
+
             // Update card width and carousel on resize
             window.addEventListener('resize', () => {
                 updateCardWidth();
             });
-        
+
             // Initial setup
             updateCardWidth();
         });
@@ -181,11 +239,11 @@
 
     <div class="container my-5">
         <div class="row g-4">
-    
+
             <!-- Large Image (Spans 2 rows) -->
             <div class="col-md-6">
                 <div class="custom-card" style="height: 500px;">
-                    <img src="./images/full-shot-happy-christian-family-church.jpg" alt="Baptism" class="custom-img">
+                    <img src="./images/water-baptism.jpg" alt="Baptism" class="custom-img">
                     <div class="overlay">
                         <h2>Water Baptism</h2>
                         <p>Celebrate your commitment!</p>
@@ -193,11 +251,11 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Right side (2 stacked images) -->
             <div class="col-md-6">
                 <div class="custom-card" style="height: 245px;">
-                    <img src="./images/medium-shot-man-reading-bible.jpg" alt="Group Meeting" class="custom-img">
+                    <img src="./images/group.avif" alt="Group Meeting" class="custom-img">
                     <div class="overlay">
                         <h2>Join A Group</h2>
                         <p>Life is better together.</p>
@@ -205,7 +263,7 @@
                     </div>
                 </div>
                 <div class="custom-card mt-3" style="height: 245px;">
-                    <img src="./images/side-view-baby-baptism-scene.jpg" alt="Team Access" class="custom-img">
+                    <img src="./images/team.avif" alt="Team Access" class="custom-img">
                     <div class="overlay">
                         <h2>Team Access</h2>
                         <p>Find a place to serve.</p>
@@ -213,11 +271,11 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Left Side (Stacked Images) -->
             <div class="col-md-6">
                 <div class="custom-card" style="height: 245px;">
-                    <img src="./0_Church_Altar_3840x2160.mp4" alt="Community Event" class="custom-img">
+                    <img src="./images/community.jpg" alt="Community Event" class="custom-img">
                     <div class="overlay">
                         <h2>Community Events</h2>
                         <p>Get involved in your city.</p>
@@ -225,8 +283,8 @@
                     </div>
                 </div>
                 <div class="custom-card mt-3" style="height: 245px;">
-                    <video class="custom-video" controls>
-                        <source src="./0_Church_Altar_3840x2160.mp4" type="video/mp4">
+                    <video class="custom-video"  autoplay>
+                        <source src="./images/live.mp4" type="video/mp4">
                         Your browser does not support videos.
                     </video>
                     <div class="overlay">
@@ -236,11 +294,12 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Large Image (Spans 2 rows) -->
             <div class="col-md-6">
                 <div class="custom-card" style="height: 500px;">
-                    <img src="./images/full-shot-happy-christian-family-church.jpg" alt="Special Gathering" class="custom-img">
+                    <img src="./images/gathering.avif" alt="Special Gathering"
+                        class="custom-img">
                     <div class="overlay">
                         <h2>Special Gathering</h2>
                         <p>Be a part of something great.</p>
@@ -248,7 +307,6 @@
                     </div>
                 </div>
             </div>
-    
         </div>
     </div>
 
@@ -262,14 +320,16 @@
             <p>Let us know you’re coming! We will save you a seat.</p>
             <button class="custom-invite-btn">Let Us Know You’re Coming</button>
         </div>
-    
+
         <div class="custom-footer-content">
             <div class="custom-footer-column">
                 <div class="custom-footer-logo">
                     <img src="your-logo.png" alt="Access Church Logo">
                 </div>
                 <ul>
-                    <li><h4>Learn More</h4></li>
+                    <li>
+                        <h4>Learn More</h4>
+                    </li>
                     <li><a href="#">About Access</a></li>
                     <li><a href="#">Leadership</a></li>
                     <li><a href="#">Kids</a></li>
@@ -277,20 +337,24 @@
                     <li><a href="#">Young Adults</a></li>
                 </ul>
             </div>
-    
+
             <div class="custom-footer-column">
                 <ul>
-                    <li><h4>Join Us</h4></li>
-                    <li><a href="#">Plan Your Visit</a></li>
+                    <li>
+                        <h4>Join Us</h4>
+                    </li>
+                    <li><a href="">Plan Your Visit</a></li>
                     <li><a href="#">Locations</a></li>
                     <li><a href="#">Service Guides</a></li>
                     <li><a href="#">Events</a></li>
                 </ul>
             </div>
-    
+
             <div class="custom-footer-column">
                 <ul>
-                    <li><h4>Next Steps</h4></li>
+                    <li>
+                        <h4>Next Steps</h4>
+                    </li>
                     <li><a href="#">Baptism</a></li>
                     <li><a href="#">Groups</a></li>
                     <li><a href="#">Next Steps Class</a></li>
@@ -298,17 +362,19 @@
                     <li><a href="#">Legacy</a></li>
                 </ul>
             </div>
-    
+
             <div class="custom-footer-column">
                 <ul>
-                    <li><h4>Messages</h4></li>
+                    <li>
+                        <h4>Messages</h4>
+                    </li>
                     <li><a href="#">Latest Message</a></li>
                     <li><a href="#">All Messages</a></li>
                     <li><a href="#">Watch Live</a></li>
                     <li><a href="#">Podcast</a></li>
                 </ul>
             </div>
-    
+
             <div class="custom-footer-column">
                 <h4>Subscribe</h4>
                 <p>Join our newsletter to stay up to date on latest messages and upcoming events.</p>
@@ -316,25 +382,13 @@
                 <button class="custom-subscribe-btn">Subscribe</button>
             </div>
         </div>
-    
+
         <p class="custom-footer-copyright">© 2024 Access Church</p>
     </footer>
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-
-
-
-    
-  
-
-
-
-
-
-
 </body>
+
 </html>
