@@ -261,10 +261,11 @@
             <div class="col-md-6">
                 <section class="reveal-bottom"> 
                     <div class="custom-card" style="height: 500px;">
-                        <video class="custom-video" id="baptism-video" autoplay loop playsinline>
+                        <video class="custom-video" id="baptism-video" autoplay loop playsinline >
                             <source src="./images/WATER BAPTISM JESUS.mp4" type="video/mp4">
                             Your browser does not support videos.
                         </video>
+                        
                         <div class="overlay">
                             <h2>Water Baptism</h2>
                             <p>Celebrate your commitment!</p>
@@ -298,7 +299,13 @@
             <div class="col-md-6">
                 <section class="reveal-bottom"> 
                 <div class="custom-card" style="height: 245px;">
-                    <img src="./images/1ST IMAGE.png" alt="Group Meeting" class="custom-img" style="object-fit: cover;">
+                    <picture>
+                        <!-- Image for smaller screens (up to 768px) -->
+                        <source srcset="./images/life_small.png" media="(max-width: 768px)">
+                        <!-- Default image for larger screens -->
+                        <img src="./images/life_big.png" alt="Team Access" class="custom-img">
+                    </picture>
+                    
                     <div class="overlay">
                         <!-- <h2>Join A Group</h2> -->
                         <p>Life is better together.</p>
@@ -308,7 +315,12 @@
                 </section>
                 <section class="reveal-top"> 
                 <div class="custom-card mt-3" style="height: 245px;">
-                    <img src="./images/Team Aceess.png" alt="Team Access" class="custom-img">
+                    <picture>
+                        <!-- Image for smaller screens (up to 768px) -->
+                        <source srcset="./images/access_small.png" media="(max-width: 768px)">
+                        <!-- Default image for larger screens -->
+                        <img src="./images/access_big.png" alt="Team Access" class="custom-img">
+                    </picture>
                     <div class="overlay">
                         <h2>Team Access</h2>
                         <p>Find a place to serve.</p>
@@ -322,7 +334,12 @@
             <div class="col-md-6">
                 <section class="reveal-left"> 
                 <div class="custom-card" style="height: 245px;">
-                    <img src="./images/community.jpg" alt="Community Event" class="custom-img">
+                    <picture>
+                        <!-- Image for smaller screens (up to 768px) -->
+                        <source srcset="./images/community_big.png" media="(max-width: 768px)">
+                        <!-- Default image for larger screens -->
+                        <img src="./images/community_big.png" alt="Team Access" class="custom-img">
+                    </picture>
                     <div class="overlay">
                         <h2>Community Events</h2>
                         <p>Get involved in your city.</p>
