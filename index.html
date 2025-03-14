@@ -144,24 +144,24 @@
                     Your browser does not support the video tag.
                 </video>
 
-                <button id="mute-toggle">
-                    <span id="mute-icon">🔇</span>
+                <button id="muted-toggle">
+                    <span id="muted-icon">🔇</span>
                 </button>
             </section>
         </div>
 
     </section>
     <script>
-        document.getElementById("mute-toggle").addEventListener("click", function () {
+        document.getElementById("muted-toggle").addEventListener("click", function () {
             const video = document.getElementById("background-video");
-            const muteIcon = document.getElementById("mute-icon");
+            const mutedIcon = document.getElementById("muted-icon");
 
             if (video.muted) {
                 video.muted = false;
-                muteIcon.textContent = '🔊';  // Unmute icon
+                mutedIcon.textContent = '🔊';  // Unmute icon
             } else {
                 video.muted = true;
-                muteIcon.textContent = '🔇';  // Mute icon
+                mutedIcon.textContent = '🔇';  // Mute icon
             }
         });
     </script>

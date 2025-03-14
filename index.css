@@ -176,7 +176,7 @@
         object-fit: cover;
     }
     
-    #mute-toggle {
+    #muted-toggle {
         position: absolute;
         bottom: 20px;
         right: 20px;
@@ -195,7 +195,7 @@
         transition: background 0.3s ease;
     }
     
-    #mute-toggle:hover {
+    #muted-toggle:hover {
         background: rgba(0, 0, 0, 0.9);
     }
     
