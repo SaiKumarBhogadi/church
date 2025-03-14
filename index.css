@@ -1231,165 +1231,161 @@
     }
 }
 
-
 .about-pastors {
-    background-color: #fff;
-    overflow: hidden;
-    margin-bottom: 0;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
 }
 
-.about-pastors-hero {
-    position: relative;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.about-pastors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-pastors-header {
     text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+.about-pastors-subtitle {
+    font-size: 1.5rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-pastors-title {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.about-pastors-body {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.about-pastors-image {
+    flex: 1;
+    max-width: 50%;
 }
 
 .about-pastors-img {
     width: 100%;
     height: 100%;
+    min-height: 400px; /* Ensures consistent height with content */
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    filter: brightness(0.7);
-}
-
-.hero-overlay {
-    position: relative;
-    z-index: 2;
-    color: white;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.about-pastors-subtitle {
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 300;
-    margin-bottom: 15px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.about-pastors-title {
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin: 0;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    background: linear-gradient(45deg, #ffffff, #f0f4f8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+.about-pastors-img:hover {
+    transform: scale(1.02);
 }
 
 .about-pastors-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInRight 0.8s ease forwards;
 }
 
 .content-wrapper {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .about-pastors-description {
     font-size: 1.2rem;
-    color: #444;
+    color: #555;
     line-height: 1.8;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
 }
 
 .about-pastors-description.highlight {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: #007bff;
     background: rgba(0, 123, 255, 0.1);
     padding: 15px;
     border-radius: 8px;
-    text-align: center;
 }
 
 .about-pastors-signature {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #666;
     font-style: italic;
     text-align: center;
-    margin: 40px 0;
-    font-weight: 400;
+    margin-top: 20px;
 }
 
-.about-pastors-social {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.social-group {
-    text-align: center;
-}
-
-.about-pastors-social-title {
-    font-size: 1.3rem;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.about-pastors-social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.about-pastors-social-icons a {
-    color: #007bff;
-    font-size: 2rem;
-    transition: all 0.3s ease;
-}
-
-.about-pastors-social-icons a:hover {
-    color: #0056b3;
-    transform: scale(1.2);
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .about-pastors-hero {
-        height: 500px;
+    .about-pastors-body {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-pastors-image {
+        max-width: 100%;
+    }
+    
+    .about-pastors-img {
+        min-height: 300px;
+    }
+    
+    .about-pastors-content {
+        padding: 0;
     }
     
     .about-pastors-title {
-        font-size: 4rem;
-    }
-    
-    .about-pastors-subtitle {
-        font-size: 1.8rem;
+        font-size: 2.8rem;
     }
 }
 
 @media (max-width: 768px) {
-    .about-pastors-hero {
-        height: 400px;
+    .about-pastors {
+        padding: 40px 15px;
     }
     
     .about-pastors-title {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
     
     .about-pastors-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .about-pastors-description {
@@ -1401,30 +1397,21 @@
     }
     
     .about-pastors-signature {
-        font-size: 1.5rem;
-    }
-    
-    .about-pastors-social {
-        flex-direction: column;
-        gap: 40px;
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 480px) {
-    .about-pastors-hero {
-        height: 300px;
-    }
-    
     .about-pastors-title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     
     .about-pastors-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
-    .about-pastors-content {
-        padding: 40px 15px;
+    .about-pastors-img {
+        min-height: 250px;
     }
 }
 
