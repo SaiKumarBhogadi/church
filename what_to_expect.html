@@ -66,7 +66,7 @@
                     path toward a meaningful and fulfilling life.
                 </p>
 
-                <button class="about-button">Plan Your Visit</button>
+              <a href="https://calendar.app.google/wXHC3vdBSfSEgCwv8"> <button class="about-button">Plan Your Visit</button> </a> 
             </section>
         </div>
         <div class="about-image">
@@ -82,27 +82,61 @@
 
         <div class="container my-5">
             <div class="row g-4">
-
+    
                 <!-- Large Image (Spans 2 rows) -->
-
+    
                 <div class="col-md-6">
                     <section class="reveal-bottom">
                         <div class="custom-card" style="height: 500px;">
-                            <img src="./images/water-baptism.jpg" alt="Baptism" class="custom-img">
+                            <video class="custom-video" id="baptism-video" autoplay loop playsinline muted>
+                                <source src="./images/water.mp4" type="video/mp4">
+                                Your browser does not support videos.
+                            </video>
+    
                             <div class="overlay">
                                 <h2>Water Baptism</h2>
                                 <p>Celebrate your commitment!</p>
-                                <!-- <button>Get Baptized →</button> -->
+    
+                                <button class="mute-toggle" id="baptism-mute-button">
+                                    <span id="baptism-mute-icon">🔇</span>
+                                </button>
                             </div>
                         </div>
+    
                     </section>
+                    <script>
+                        const baptismVideo = document.getElementById('baptism-video');
+                        const baptismMuteButton = document.getElementById('baptism-mute-button');
+                        const baptismMuteIcon = document.getElementById('baptism-mute-icon');
+    
+                        // Ensure video starts muted
+                        baptismVideo.muted = true;
+    
+                        baptismMuteButton.addEventListener('click', () => {
+                            if (baptismVideo.muted) {
+                                baptismVideo.muted = false;
+                                baptismMuteIcon.textContent = '🔊'; // Unmuted Icon
+                            } else {
+                                baptismVideo.muted = true;
+                                baptismMuteIcon.textContent = '🔇'; // Muted Icon
+                            }
+                        });
+    
+                    </script>
+    
                 </div>
-
+    
                 <!-- Right side (2 stacked images) -->
                 <div class="col-md-6">
                     <section class="reveal-bottom">
                         <div class="custom-card" style="height: 245px;">
-                            <img src="./images/group.avif" alt="Group Meeting" class="custom-img">
+                            <picture>
+                                <!-- Image for smaller screens (up to 768px) -->
+                                <source srcset="./images/life_small.png" media="(max-width: 768px)">
+                                <!-- Default image for larger screens -->
+                                <img src="./images/life_big.png" alt="Team Access" class="custom-img">
+                            </picture>
+    
                             <div class="overlay">
                                 <!-- <h2>Join A Group</h2> -->
                                 <p>Life is better together.</p>
@@ -112,7 +146,12 @@
                     </section>
                     <section class="reveal-top">
                         <div class="custom-card mt-3" style="height: 245px;">
-                            <img src="./images/team.avif" alt="Team Access" class="custom-img">
+                            <picture>
+                                <!-- Image for smaller screens (up to 768px) -->
+                                <source srcset="./images/img2.jpg" media="(max-width: 768px)">
+                                <!-- Default image for larger screens -->
+                                <img src="./images/access_big.png" alt="Team Access" class="custom-img">
+                            </picture>
                             <div class="overlay">
                                 <h2>Team Access</h2>
                                 <p>Find a place to serve.</p>
@@ -121,12 +160,17 @@
                         </div>
                     </section>
                 </div>
-
+    
                 <!-- Left Side (Stacked Images) -->
                 <div class="col-md-6">
                     <section class="reveal-left">
                         <div class="custom-card" style="height: 245px;">
-                            <img src="./images/community.jpg" alt="Community Event" class="custom-img">
+                            <picture>
+                                <!-- Image for smaller screens (up to 768px) -->
+                                <source srcset="./images/community_big.png" media="(max-width: 768px)">
+                                <!-- Default image for larger screens -->
+                                <img src="./images/community_big.png" alt="Team Access" class="custom-img">
+                            </picture>
                             <div class="overlay">
                                 <h2>Community Events</h2>
                                 <p>Get involved in your city.</p>
@@ -136,19 +180,42 @@
                     </section>
                     <section class="reveal-top">
                         <div class="custom-card mt-3" style="height: 245px;">
-                            <video class="custom-video" autoplay>
-                                <source src="./images/live.mp4" type="video/mp4">
+                            <video class="custom-video" id="jcam-video" autoplay muted playsinline>
+                                <source src="./images/JCAM.mp4" type="video/mp4">
                                 Your browser does not support videos.
                             </video>
                             <div class="overlay">
                                 <h2>Watch Live</h2>
                                 <p>Join us for a live experience.</p>
                                 <!-- <button>Watch Now →</button> -->
+                                <button class="mute-toggle" id="jcam-mute-button">
+                                    <span id="jcam-mute-icon">🔇</span>
+                                </button>
                             </div>
                         </div>
                     </section>
+    
+                    <script>
+                        const jcamVideo = document.getElementById('jcam-video');
+                        const jcamMuteButton = document.getElementById('jcam-mute-button');
+                        const jcamMuteIcon = document.getElementById('jcam-mute-icon');
+    
+                        // Ensure video starts muted
+                        jcamVideo.muted = true;
+    
+                        jcamMuteButton.addEventListener('click', () => {
+                            if (jcamVideo.muted) {
+                                jcamVideo.muted = false;
+                                jcamMuteIcon.textContent = '🔊'; // Unmuted Icon
+                            } else {
+                                jcamVideo.muted = true;
+                                jcamMuteIcon.textContent = '🔇'; // Muted Icon
+                            }
+                        });
+    
+                    </script>
                 </div>
-
+    
                 <!-- Large Image (Spans 2 rows) -->
                 <div class="col-md-6">
                     <section class="reveal-bottom">
@@ -164,6 +231,7 @@
                 </div>
             </div>
         </div>
+    
     </div>
 
 

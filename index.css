@@ -676,7 +676,7 @@
 }
 
 .custom-footer-column input {
-    width: 100%;
+    width: 150px;
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
@@ -1023,53 +1023,95 @@
 #mute-toggle-3:hover {
     background: rgba(0, 0, 0, 0.9);
 }
-  .messages-series {
-    padding: 50px 0;
+.messages-series {
+    padding: 50px 20px;
     text-align: center;
     background: #fff;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .messages-grid {
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #3b1a74;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.messages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
-  }
-  
-  .message-card {
+}
+
+.message-card {
     background: #f5f5f5;
     padding: 15px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-  }
-  
-  .message-card img {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.message-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Video iFrame Styling */
+.video-iframe {
     width: 100%;
-    border-radius: 10px;
-  }
-  
-  .message-card h3 {
-    font-size: 1.2rem;
-    color: #222;
-    margin-top: 10px;
-  }
-  
-  .message-card p {
+    height: 200px; /* Ideal height for balanced layout */
+    border: none;
+    border-radius: 12px;
+}
+
+/* Text Styling */
+.message-card h3 {
+    font-size: 1.3rem;
+    color: #3b1a74;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.message-card p {
     font-size: 1rem;
     color: #666;
-  }
-  
-  .message-card:hover {
-    transform: scale(1.05);
-  }
-  
+    margin-top: 5px;
+}
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .video-iframe {
+        height: 180px;
+    }
+
+    .message-card {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .video-iframe {
+        height: 160px;
+    }
+
+    .message-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .message-card p {
+        font-size: 0.9rem;
+    }
+}
+
 
 
 
@@ -1190,273 +1232,432 @@
 }
 
 
-/* About Pastors Section */
 .about-pastors {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 20px;
-    padding-left: 120px;
-    padding-right: 80px;
-    /* max-width: 1400px; */
-    margin: 0 auto;
-    background-color: #1a1a1a; /* Dark background */
-    color: #fff; /* White text for contrast */
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
-/* Pastors Image */
-.about-pastors-image {
-    /* flex: 1; */
-    padding-right: 40px;
+.about-pastors-hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .about-pastors-img {
     width: 100%;
-    max-width: 500px; /* Adjust based on your image size */
-    height: auto;
-    border-radius: 10px; /* Rounded corners like in the image */
+    height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: brightness(0.7);
 }
 
-/* Pastors Content */
-.about-pastors-content {
-    /* flex: 1; */
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
 }
 
 .about-pastors-subtitle {
-    font-size: 1rem;
-    color: #00b4d8; /* Light blue for subtitle */
-    margin-bottom: 10px;
+    font-size: 2rem;
     text-transform: uppercase;
-    font-weight: bold;
+    letter-spacing: 4px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .about-pastors-title {
-    font-size: 2.5rem; /* Large, bold title */
-    color: #fff;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(45deg, #ffffff, #f0f4f8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-pastors-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.content-wrapper {
+    position: relative;
 }
 
 .about-pastors-description {
-    font-size: 1rem;
-    color: #ccc; /* Light gray for description */
-    line-height: 1.6;
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
     margin-bottom: 20px;
-    max-width: 500px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-pastors-description.highlight {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #007bff;
+    background: rgba(0, 123, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .about-pastors-signature {
-    font-size: 1.2rem;
-    color: #fff;
-    font-family: 'Pacifico', cursive; /* Or a similar cursive font for signature */
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #666;
     font-style: italic;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 400;
 }
 
-/* Pastors Social */
 .about-pastors-social {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.social-group {
+    text-align: center;
 }
 
 .about-pastors-social-title {
-    font-size: 1rem;
-    color: #fff;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .about-pastors-social-icons {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .about-pastors-social-icons a {
-    color: #fff;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #007bff;
+    font-size: 2rem;
+    transition: all 0.3s ease;
 }
 
 .about-pastors-social-icons a:hover {
-    color: #00b4d8; /* Light blue on hover */
+    color: #0056b3;
+    transform: scale(1.2);
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .about-pastors {
-        padding: 30px 15px;
-        flex-direction: column;
-        text-align: center;
+    .about-pastors-hero {
+        height: 500px;
     }
-
-    .about-pastors-image {
-        padding-right: 0;
-        margin-bottom: 20px;
+    
+    .about-pastors-title {
+        font-size: 4rem;
     }
-
-    .about-pastors-img {
-        max-width: 400px; /* Smaller image on medium screens */
-    }
-
-    .about-pastors-description {
-        max-width: 100%;
+    
+    .about-pastors-subtitle {
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 768px) {
-    .about-pastors {
-        padding: 20px 10px;
+    .about-pastors-hero {
+        height: 400px;
     }
-
+    
     .about-pastors-title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
-
+    
+    .about-pastors-subtitle {
+        font-size: 1.5rem;
+    }
+    
     .about-pastors-description {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
-
-    .about-pastors-img {
-        max-width: 300px; /* Smaller image on small screens */
+    
+    .about-pastors-description.highlight {
+        font-size: 1.2rem;
     }
-
+    
     .about-pastors-signature {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
-
-    .about-pastors-social-title {
-        font-size: 0.9rem;
+    
+    .about-pastors-social {
+        flex-direction: column;
+        gap: 40px;
     }
+}
 
-    .about-pastors-social-icons a {
-        font-size: 1rem;
+@media (max-width: 480px) {
+    .about-pastors-hero {
+        height: 300px;
+    }
+    
+    .about-pastors-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-pastors-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .about-pastors-content {
+        padding: 40px 15px;
     }
 }
 
 
 .about-next-step {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-}
-
-.about-next-step-grid {
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+   }
+   
+   .about-next-step-grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-}
-
-.about-next-step-card {
-    background: white;
-    border-radius: 12px;
+    grid-template-columns: 1fr 1fr; /* Equal columns */
+    gap: 40px;
+   }
+   
+   .about-next-step-card {
+    position: relative;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: white;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-}
-
-.about-next-step-card:hover {
+    display: flex;
+    flex-direction: column;
+    height: 800px; /* Fixed height for consistency */
+   }
+   
+   .about-next-step-card:hover {
     transform: translateY(-5px);
-}
-
-.card-image {
-    width: 100%;
-    height: 250px;
-}
-
-.about-next-step-img {
+   }
+   
+   .card-hero {
+    position: relative;
+    height: 300px; /* Fixed height for both cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0; /* Prevents shrinking */
+   }
+   
+   .about-next-step-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.card-content {
-    padding: 30px;
-}
-
-.about-next-step-title {
-    font-size: 2.2rem;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-.about-next-step-description {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.about-next-step-note {
-    font-size: 1rem;
-    color: #777;
-    line-height: 1.6;
-    font-style: italic;
-    position: relative;
-}
-
-.about-next-step-note:before {
-    content: '“';
-    font-size: 2rem;
-    color: #007bff;
     position: absolute;
-    left: -20px;
-    top: -10px;
-}
-
-.about-next-step-note:after {
-    content: '”';
-    font-size: 2rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: brightness(0.6);
+   }
+   
+   .hero-overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 100%;
+   }
+   
+   .about-next-step-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(45deg, #ffffff, #f0f4f8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+   }
+   
+   .about-next-step-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+   }
+   
+   .card-content {
+    padding: 30px;
+    flex-grow: 1; /* Allows content to fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes content evenly */
+   }
+   
+   .about-next-step-description {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+   }
+   
+   .about-next-step-description.highlight {
+    font-size: 1.3rem;
+    font-weight: 500;
     color: #007bff;
-}
-
-.about-next-step-button {
-    padding: 12px 35px;
+    background: rgba(0, 123, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+   }
+   
+   .about-next-step-cta {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+   }
+   
+   .about-next-step-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 15px 30px;
     background: linear-gradient(45deg, #007bff, #00b4d8);
     color: white;
     border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 500;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.about-next-step-button:hover {
+   }
+   
+   .about-next-step-button:hover {
     background: linear-gradient(45deg, #0056b3, #0096c7);
-    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
+    box-shadow: 0 3px 15px rgba(0, 123, 255, 0.4);
+   }
+   
+   /* Animations */
+   .reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: revealLeft 0.8s ease forwards;
+   }
+   
+   .reveal-top {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: revealTop 0.8s ease forwards;
+   }
+   
+   @keyframes revealLeft {
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+   }
+   
+   @keyframes revealTop {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+   }
+   
+   /* Responsive Design */
+   @media (max-width: 1024px) {
     .about-next-step-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    grid-template-columns: 1fr; /* Stack cards */
+    gap: 30px;
     }
     
-    .card-image {
-        height: 200px;
+    .about-next-step-card {
+    height: auto; /* Allow natural height on smaller screens */
+    }
+    
+    .card-hero {
+    height: 300px ;
     }
     
     .about-next-step-title {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .about-next-step {
-        padding: 40px 15px;
+    font-size: 3.5rem;
     }
     
-    .card-content {
-        padding: 20px;
+    .about-next-step-subtitle {
+    font-size: 2rem;
     }
-}
-
+   }
+   
+   @media (max-width: 768px) {
+    .about-next-step {
+    padding: 40px 15px;
+    }
+    
+    .card-hero {
+    height: 250px;
+    }
+    
+    .about-next-step-title {
+    font-size: 2.8rem;
+    }
+    
+    .about-next-step-subtitle {
+    font-size: 1.8rem;
+    }
+    
+    .about-next-step-description {
+    font-size: 1.1rem;
+    }
+    
+    .about-next-step-description.highlight {
+    font-size: 1.2rem;
+    }
+   }
+   
+   @media (max-width: 480px) {
+    .card-hero {
+    height: 200px;
+    }
+    
+    .about-next-step-title {
+    font-size: 2.2rem;
+    }
+    
+    .about-next-step-subtitle {
+    font-size: 1.5rem;
+    }
+    
+    .about-next-step-button {
+    width: 160px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    }
+   }
 
 
 /* About History Section */
