@@ -130,7 +130,7 @@
         <div class="text-wrapper">
             <section class="reveal-bottom">   
                 <h2 style="color:#3a1a70;">Grow in Faith Together at JCAM Church</h2>
-                <p>oin us at JCAM Church, where we come together as a community to grow in faith, experience God’s love, and walk in His purpose. Through worship, prayer, and fellowship, we strengthen our relationship with Jesus Christ and support one another on our spiritual journey.
+                <p>Join us at JCAM Church, where we come together as a community to grow in faith, experience God’s love, and walk in His purpose. Through worship, prayer, and fellowship, we strengthen our relationship with Jesus Christ and support one another on our spiritual journey.
 
                     Be part of a faith-filled family. Let’s grow in Christ together!</p>
 
@@ -177,22 +177,22 @@
             <div class="church-carousel">
                 <div class="church-carousel-track">
                     <div class="church-card">
-                        <img src="./images/img1.jpg" alt="North Lakeland Location">
-                        <button class="church-button"> <a href="https://g.co/kgs/diBuf1r"
-                                style="color: white; text-decoration:none;">Get Directions</a></button>
+                        <img src="./images/VISIT JCAM .png" alt="North Lakeland Location">
+                        <a href="https://g.co/kgs/diBuf1r"
+                        style="color: white; text-decoration:none;"> <button class="church-button"> Get Directions</button></a>
                     </div>
                     <div class="church-card">
                         <img src="./images/img2.jpg" alt="Bartow Location">
-                        <button class="church-button">JCAM Church</button>
+                      <a href="https://youtu.be/_iiOuDVkZNI?si=Q4k-XThsrtsvonMu">  <button class="church-button">JCAM Church</button></a>
                     </div>
                     <div class="church-card">
                         <img src="./images/img3.jpg " alt="Online Services">
-                        <button class="church-button">Watch Messages Online</button>
+                        <a href="https://youtu.be/_iiOuDVkZNI?si=Q4k-XThsrtsvonMu">   <button class="church-button">Watch Messages Online</button></a>
                     </div>
                     <div class="church-card">
                         <img src="./images/img4.jpg" alt="North Lakeland Location">
-                        <button class="church-button"><a href="https://g.co/kgs/diBuf1r"
-                                style="color: white; text-decoration:none;">Get Directions</a></button>
+                        <a href="https://g.co/kgs/diBuf1r"
+                        style="color: white; text-decoration:none;"> <button class="church-button"> Get Directions</button></a>
                     </div>
                 </div>
                 <button class="church-prev-btn">←</button>
@@ -260,22 +260,45 @@
 
             <div class="col-md-6">
                 <section class="reveal-bottom"> 
-                <div class="custom-card" style="height: 500px;">
-                    <img src="./images/water-baptism.jpg" alt="Baptism" class="custom-img">
-                    <div class="overlay">
-                        <h2>Water Baptism</h2>
-                        <p>Celebrate your commitment!</p>
-                        <!-- <button>Get Baptized →</button> -->
+                    <div class="custom-card" style="height: 500px;">
+                        <video class="custom-video" id="baptism-video" autoplay loop playsinline>
+                            <source src="./images/WATER BAPTISM JESUS.mp4" type="video/mp4">
+                            Your browser does not support videos.
+                        </video>
+                        <div class="overlay">
+                            <h2>Water Baptism</h2>
+                            <p>Celebrate your commitment!</p>
+                    
+                            <button class="mute-toggle" id="mute-button">
+                                <span id="mute-icon">🔇</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
+                    
                 </section>  
+                <script>
+                    const video = document.getElementById('baptism-video');
+                    const muteButton = document.getElementById('mute-button');
+                    const muteIcon = document.getElementById('mute-icon');
+                
+                    muteButton.addEventListener('click', () => {
+                        if (video.muted) {
+                            video.muted = false;
+                            muteIcon.textContent = '🔊'; // Unmuted Icon
+                        } else {
+                            video.muted = true;
+                            muteIcon.textContent = '🔇'; // Muted Icon
+                        }
+                    });
+                </script>
+                
             </div>
 
             <!-- Right side (2 stacked images) -->
             <div class="col-md-6">
                 <section class="reveal-bottom"> 
                 <div class="custom-card" style="height: 245px;">
-                    <img src="./images/group.avif" alt="Group Meeting" class="custom-img">
+                    <img src="./images/1ST IMAGE.png" alt="Group Meeting" class="custom-img" style="object-fit: cover;">
                     <div class="overlay">
                         <!-- <h2>Join A Group</h2> -->
                         <p>Life is better together.</p>
@@ -285,7 +308,7 @@
                 </section>
                 <section class="reveal-top"> 
                 <div class="custom-card mt-3" style="height: 245px;">
-                    <img src="./images/team.avif" alt="Team Access" class="custom-img">
+                    <img src="./images/Team Aceess.png" alt="Team Access" class="custom-img">
                     <div class="overlay">
                         <h2>Team Access</h2>
                         <p>Find a place to serve.</p>
