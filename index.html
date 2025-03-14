@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCAM CHURCH</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/JCAM_CHURCH_ TRANSPARENT .png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="experienceDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Experience
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="experienceDropdown">
+                            <li><a class="dropdown-item" href="./about.html">About</a></li>
+                            <li><a class="dropdown-item" href="./what_to_expect.html">What to Except</a></li>
+                            <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="./leadership.html">Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./messages.html">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./locations.html">Locations</a>
+                    </li>
+                </ul>
+                <div class="navbar-buttons d-flex">
+                    <a href="#" class="btn btn-primary">Give</a>
+                    <a href="./plan_to_visit.html" class="btn btn-outline-primary">Plan Your Visit</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- Banner Section -->
+    <!-- <header class="banner">
+        <video autoplay muted loop id="background-video">
+            <source src="./images/header.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="banner-content">
+            <h3>WELCOME TO ACCESS CHURCH</h3>
+            <h1>A Church That Feels Like Home</h1>
+        </div>
+    </header> -->
+
+    <header class="banner">
+        <video autoplay muted loop id="background-video-large">
+            <source src="./images/header.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <video autoplay muted loop id="background-video-small">
+            <source src="./images/small_video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <button id="mute-toggle">🔇</button>
+    </header>
+
+    <script>
+        const videoLarge = document.getElementById('background-video-large');
+        const videoSmall = document.getElementById('background-video-small');
+        const muteToggleBtn = document.getElementById('mute-toggle');
+
+        muteToggleBtn.addEventListener('click', () => {
+            const isMuted = videoLarge.muted && videoSmall.muted;
+            videoLarge.muted = !isMuted;
+            videoSmall.muted = !isMuted;
+            muteToggleBtn.textContent = isMuted ? '🔊' : '🔇';
+        });
+    </script>
+
+
+
+
+
+
+    <section class="video-section">
+
+        <div class="image-wrapper">
+            <section class="reveal-left">
+                <img src="./images/jcam 1.jpg" alt="Church Community">
+            </section>
+        </div>
+
+
+        <div class="text-wrapper">
+            <section class="reveal-top">
+                <h2>Step Closer to Jesus</h2>
+                <p>JCAM Church is a faith-driven community dedicated to spreading the love and teachings of Jesus
+                    Christ. We
+                    are a congregation of believers who come together in worship, prayer, and service, striving to make
+                    a
+                    meaningful impact in the lives of individuals and communities. <br> <br>
+
+                    At JCAM, we offer a place of refuge, spiritual growth, and fellowship for all who seek God’s
+                    presence.
+                    Through our worship services, outreach programs, and ministry activities, we aim to strengthen
+                    faith,
+                    foster unity, and uplift those in need.</p>
+                <button class="watch-btn">Join Now</button>
+            </section>
+        </div>
+
+    </section>
+
+    <section class="video-section alternate">
+        <div class="text-wrapper">
+            <section class="reveal-bottom">   
+                <h2>Grow in Faith Together</h2>
+                <p>Discover inspiring messages to deepen your faith. Watch live or revisit past sermons anytime.</p>
+
+
+                <button class="watch-btn"><a href="https://youtu.be/_iiOuDVkZNI?si=Q4k-XThsrtsvonMu"
+                        style="color: white; text-decoration:none;">Watch Now</a></button>
+            </section>
+        </div>
+        <div class="video-wrapper">
+            <section class="reveal-top">
+                <video id="background-video" autoplay muted loop playsinline>
+                    <source src="./images/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <button id="mute-toggle">
+                    <span id="mute-icon">🔇</span>
+                </button>
+            </section>
+        </div>
+
+    </section>
+    <script>
+        document.getElementById("mute-toggle").addEventListener("click", function () {
+            const video = document.getElementById("background-video");
+            const muteIcon = document.getElementById("mute-icon");
+
+            if (video.muted) {
+                video.muted = false;
+                muteIcon.textContent = '🔊';  // Unmute icon
+            } else {
+                video.muted = true;
+                muteIcon.textContent = '🔇';  // Mute icon
+            }
+        });
+    </script>
+
+
+
+    <div class="church-slider">
+        <div class="church-wrapper">
+            <h1 class="church-title">Visit JCAM</h1>
+            <p class="church-description">Join us every Sunday at our location!</p>
+            <div class="church-carousel">
+                <div class="church-carousel-track">
+                    <div class="church-card">
+                        <img src="./images/img1.jpg" alt="North Lakeland Location">
+                        <button class="church-button"> <a href="https://g.co/kgs/diBuf1r"
+                                style="color: white; text-decoration:none;">Get Directions</a></button>
+                    </div>
+                    <div class="church-card">
+                        <img src="./images/img2.jpg" alt="Bartow Location">
+                        <button class="church-button">JCAM Church</button>
+                    </div>
+                    <div class="church-card">
+                        <img src="./images/img3.jpg " alt="Online Services">
+                        <button class="church-button">Watch Messages Online</button>
+                    </div>
+                    <div class="church-card">
+                        <img src="./images/img4.jpg" alt="North Lakeland Location">
+                        <button class="church-button"><a href="https://g.co/kgs/diBuf1r"
+                                style="color: white; text-decoration:none;">Get Directions</a></button>
+                    </div>
+                </div>
+                <button class="church-prev-btn">←</button>
+                <button class="church-next-btn">→</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.church-carousel-track');
+            const cards = document.querySelectorAll('.church-card');
+            const prevBtn = document.querySelector('.church-prev-btn');
+            const nextBtn = document.querySelector('.church-next-btn');
+            let currentIndex = 0;
+            let cardWidth = cards[0].offsetWidth + 20; // Including gap
+
+            function updateCarousel() {
+                const visibleCards = getVisibleCards();
+                const maxIndex = cards.length - visibleCards;
+                currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            }
+
+            function getVisibleCards() {
+                if (window.innerWidth <= 768) return 1;
+                if (window.innerWidth <= 1024) return 2;
+                return 3;
+            }
+
+            function updateCardWidth() {
+                cardWidth = cards[0].offsetWidth + 20; // Recalculate width on resize, including gap
+                updateCarousel();
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex--;
+                updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex++;
+                updateCarousel();
+            });
+
+            // Update card width and carousel on resize
+            window.addEventListener('resize', () => {
+                updateCardWidth();
+            });
+
+            // Initial setup
+            updateCardWidth();
+        });
+    </script>
+
+
+
+
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <!-- Large Image (Spans 2 rows) -->
+
+            <div class="col-md-6">
+                <section class="reveal-bottom"> 
+                <div class="custom-card" style="height: 500px;">
+                    <img src="./images/water-baptism.jpg" alt="Baptism" class="custom-img">
+                    <div class="overlay">
+                        <h2>Water Baptism</h2>
+                        <p>Celebrate your commitment!</p>
+                        <!-- <button>Get Baptized →</button> -->
+                    </div>
+                </div>
+                </section>  
+            </div>
+
+            <!-- Right side (2 stacked images) -->
+            <div class="col-md-6">
+                <section class="reveal-bottom"> 
+                <div class="custom-card" style="height: 245px;">
+                    <img src="./images/group.avif" alt="Group Meeting" class="custom-img">
+                    <div class="overlay">
+                        <!-- <h2>Join A Group</h2> -->
+                        <p>Life is better together.</p>
+                        <!-- <button>Find Your Group →</button> -->
+                    </div>
+                </div>
+                </section>
+                <section class="reveal-top"> 
+                <div class="custom-card mt-3" style="height: 245px;">
+                    <img src="./images/team.avif" alt="Team Access" class="custom-img">
+                    <div class="overlay">
+                        <h2>Team Access</h2>
+                        <p>Find a place to serve.</p>
+                        <!-- <button>Join Team Access →</button> -->
+                    </div>
+                </div>
+                </section>
+            </div>
+
+            <!-- Left Side (Stacked Images) -->
+            <div class="col-md-6">
+                <section class="reveal-left"> 
+                <div class="custom-card" style="height: 245px;">
+                    <img src="./images/community.jpg" alt="Community Event" class="custom-img">
+                    <div class="overlay">
+                        <h2>Community Events</h2>
+                        <p>Get involved in your city.</p>
+                        <!-- <button>Explore Events →</button> -->
+                    </div>
+                </div>
+                </section>
+                <section class="reveal-top"> 
+                <div class="custom-card mt-3" style="height: 245px;">
+                    <video class="custom-video" autoplay>
+                        <source src="./images/live.mp4" type="video/mp4">
+                        Your browser does not support videos.
+                    </video>
+                    <div class="overlay">
+                        <h2>Watch Live</h2>
+                        <p>Join us for a live experience.</p>
+                        <!-- <button>Watch Now →</button> -->
+                    </div>
+                </div>
+                </section>
+            </div>
+
+            <!-- Large Image (Spans 2 rows) -->
+            <div class="col-md-6">
+                <section class="reveal-bottom"> 
+                <div class="custom-card" style="height: 500px;">
+                    <img src="./images/gathering.avif" alt="Special Gathering" class="custom-img">
+                    <div class="overlay">
+                        <h2>Special Gathering</h2>
+                        <p>Be a part of something great.</p>
+                        <!-- <button>Learn More →</button> -->
+                    </div>
+                </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="custom-footer">
+        <div class="custom-invite">
+            <h2>We’d love to see you this weekend!</h2>
+            <p>Let us know you’re coming! We will save you a seat.</p>
+            <button class="custom-invite-btn">Let Us Know You’re Coming</button>
+        </div>
+
+        <div class="custom-footer-content">
+            <div class="custom-footer-column">
+                <div class="custom-footer-logo">
+                    <img src="your-logo.png" alt="Access Church Logo">
+                </div>
+                <ul>
+                    <li>
+                        <h4>Learn More</h4>
+                    </li>
+                    <li><a href="#">About Access</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Youth</a></li>
+                    <li><a href="#">Young Adults</a></li>
+                </ul>
+            </div>
+
+            <div class="custom-footer-column">
+                <ul>
+                    <li>
+                        <h4>Join Us</h4>
+                    </li>
+                    <li><a href="">Plan Your Visit</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Service Guides</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+
+            <div class="custom-footer-column">
+                <ul>
+                    <li>
+                        <h4>Next Steps</h4>
+                    </li>
+                    <li><a href="#">Baptism</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Next Steps Class</a></li>
+                    <li><a href="#">Serve</a></li>
+                    <li><a href="#">Legacy</a></li>
+                </ul>
+            </div>
+
+            <div class="custom-footer-column">
+                <ul>
+                    <li>
+                        <h4>Messages</h4>
+                    </li>
+                    <li><a href="#">Latest Message</a></li>
+                    <li><a href="#">All Messages</a></li>
+                    <li><a href="#">Watch Live</a></li>
+                    <li><a href="#">Podcast</a></li>
+                </ul>
+            </div>
+
+            <div class="custom-footer-column">
+                <h4>Subscribe</h4>
+                <p>Join our newsletter to stay up to date on latest messages and upcoming events.</p>
+                <input type="email" placeholder="Email">
+                <button class="custom-subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+
+        <p class="custom-footer-copyright">© 2024 Access Church</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./scripts.js"></script>
+
+</body>
+
+</html>
