@@ -128,9 +128,11 @@
 
     <section class="video-section alternate">
         <div class="text-wrapper">
-            <section class="reveal-bottom">   
+            <section class="reveal-bottom">
                 <h2 style="color:#3a1a70;">Grow in Faith Together at JCAM Church</h2>
-                <p>Join us at JCAM Church, where we come together as a community to grow in faith, experience God’s love, and walk in His purpose. Through worship, prayer, and fellowship, we strengthen our relationship with Jesus Christ and support one another on our spiritual journey.
+                <p>Join us at JCAM Church, where we come together as a community to grow in faith, experience God’s
+                    love, and walk in His purpose. Through worship, prayer, and fellowship, we strengthen our
+                    relationship with Jesus Christ and support one another on our spiritual journey.
 
                     Be part of a faith-filled family. Let’s grow in Christ together!</p>
 
@@ -178,21 +180,23 @@
                 <div class="church-carousel-track">
                     <div class="church-card">
                         <img src="./images/VISIT JCAM .png" alt="North Lakeland Location">
-                        <a href="https://g.co/kgs/diBuf1r"
-                        style="color: white; text-decoration:none;"> <button class="church-button"> Get Directions</button></a>
+                        <a href="https://g.co/kgs/diBuf1r" style="color: white; text-decoration:none;"> <button
+                                class="church-button"> Get Directions</button></a>
                     </div>
                     <div class="church-card">
                         <img src="./images/img2.jpg" alt="Bartow Location">
-                      <a href="https://youtu.be/_iiOuDVkZNI?si=Q4k-XThsrtsvonMu">  <button class="church-button">JCAM Church</button></a>
+                        <a href="https://youtu.be/_iiOuDVkZNI?si=Q4k-XThsrtsvonMu"> <button class="church-button">JCAM
+                                Church</button></a>
                     </div>
                     <div class="church-card">
                         <img src="./images/img3.jpg " alt="Online Services">
-                        <a href="https://youtu.be/_iiOuDVkZNI?si=Q4k-XThsrtsvonMu">   <button class="church-button">Watch Messages Online</button></a>
+                        <a href="https://youtu.be/_iiOuDVkZNI?si=Q4k-XThsrtsvonMu"> <button class="church-button">Watch
+                                Messages Online</button></a>
                     </div>
                     <div class="church-card">
                         <img src="./images/img4.jpg" alt="North Lakeland Location">
-                        <a href="https://g.co/kgs/diBuf1r"
-                        style="color: white; text-decoration:none;"> <button class="church-button"> Get Directions</button></a>
+                        <a href="https://g.co/kgs/diBuf1r" style="color: white; text-decoration:none;"> <button
+                                class="church-button"> Get Directions</button></a>
                     </div>
                 </div>
                 <button class="church-prev-btn">←</button>
@@ -259,120 +263,147 @@
             <!-- Large Image (Spans 2 rows) -->
 
             <div class="col-md-6">
-                <section class="reveal-bottom"> 
+                <section class="reveal-bottom">
                     <div class="custom-card" style="height: 500px;">
-                        <video class="custom-video" id="baptism-video" autoplay loop playsinline >
+                        <video class="custom-video" id="baptism-video" autoplay loop playsinline muted>
                             <source src="./images/WATER BAPTISM JESUS.mp4" type="video/mp4">
                             Your browser does not support videos.
                         </video>
-                        
+
                         <div class="overlay">
                             <h2>Water Baptism</h2>
                             <p>Celebrate your commitment!</p>
-                    
-                            <button class="mute-toggle" id="mute-button">
-                                <span id="mute-icon">🔇</span>
+
+                            <button class="mute-toggle" id="baptism-mute-button">
+                                <span id="baptism-mute-icon">🔇</span>
                             </button>
                         </div>
                     </div>
-                    
-                </section>  
+
+                </section>
                 <script>
-                    const video = document.getElementById('baptism-video');
-                    const muteButton = document.getElementById('mute-button');
-                    const muteIcon = document.getElementById('mute-icon');
-                
-                    muteButton.addEventListener('click', () => {
-                        if (video.muted) {
-                            video.muted = false;
-                            muteIcon.textContent = '🔊'; // Unmuted Icon
+                    const baptismVideo = document.getElementById('baptism-video');
+                    const baptismMuteButton = document.getElementById('baptism-mute-button');
+                    const baptismMuteIcon = document.getElementById('baptism-mute-icon');
+
+                    // Ensure video starts muted
+                    baptismVideo.muted = true;
+
+                    baptismMuteButton.addEventListener('click', () => {
+                        if (baptismVideo.muted) {
+                            baptismVideo.muted = false;
+                            baptismMuteIcon.textContent = '🔊'; // Unmuted Icon
                         } else {
-                            video.muted = true;
-                            muteIcon.textContent = '🔇'; // Muted Icon
+                            baptismVideo.muted = true;
+                            baptismMuteIcon.textContent = '🔇'; // Muted Icon
                         }
                     });
+
                 </script>
-                
+
             </div>
 
             <!-- Right side (2 stacked images) -->
             <div class="col-md-6">
-                <section class="reveal-bottom"> 
-                <div class="custom-card" style="height: 245px;">
-                    <picture>
-                        <!-- Image for smaller screens (up to 768px) -->
-                        <source srcset="./images/life_small.png" media="(max-width: 768px)">
-                        <!-- Default image for larger screens -->
-                        <img src="./images/life_big.png" alt="Team Access" class="custom-img">
-                    </picture>
-                    
-                    <div class="overlay">
-                        <!-- <h2>Join A Group</h2> -->
-                        <p>Life is better together.</p>
-                        <!-- <button>Find Your Group →</button> -->
+                <section class="reveal-bottom">
+                    <div class="custom-card" style="height: 245px;">
+                        <picture>
+                            <!-- Image for smaller screens (up to 768px) -->
+                            <source srcset="./images/life_small.png" media="(max-width: 768px)">
+                            <!-- Default image for larger screens -->
+                            <img src="./images/life_big.png" alt="Team Access" class="custom-img">
+                        </picture>
+
+                        <div class="overlay">
+                            <!-- <h2>Join A Group</h2> -->
+                            <p>Life is better together.</p>
+                            <!-- <button>Find Your Group →</button> -->
+                        </div>
                     </div>
-                </div>
                 </section>
-                <section class="reveal-top"> 
-                <div class="custom-card mt-3" style="height: 245px;">
-                    <picture>
-                        <!-- Image for smaller screens (up to 768px) -->
-                        <source srcset="./images/access_small.png" media="(max-width: 768px)">
-                        <!-- Default image for larger screens -->
-                        <img src="./images/access_big.png" alt="Team Access" class="custom-img">
-                    </picture>
-                    <div class="overlay">
-                        <h2>Team Access</h2>
-                        <p>Find a place to serve.</p>
-                        <!-- <button>Join Team Access →</button> -->
+                <section class="reveal-top">
+                    <div class="custom-card mt-3" style="height: 245px;">
+                        <picture>
+                            <!-- Image for smaller screens (up to 768px) -->
+                            <source srcset="./images/access_small.png" media="(max-width: 768px)">
+                            <!-- Default image for larger screens -->
+                            <img src="./images/access_big.png" alt="Team Access" class="custom-img">
+                        </picture>
+                        <div class="overlay">
+                            <h2>Team Access</h2>
+                            <p>Find a place to serve.</p>
+                            <!-- <button>Join Team Access →</button> -->
+                        </div>
                     </div>
-                </div>
                 </section>
             </div>
 
             <!-- Left Side (Stacked Images) -->
             <div class="col-md-6">
-                <section class="reveal-left"> 
-                <div class="custom-card" style="height: 245px;">
-                    <picture>
-                        <!-- Image for smaller screens (up to 768px) -->
-                        <source srcset="./images/community_big.png" media="(max-width: 768px)">
-                        <!-- Default image for larger screens -->
-                        <img src="./images/community_big.png" alt="Team Access" class="custom-img">
-                    </picture>
-                    <div class="overlay">
-                        <h2>Community Events</h2>
-                        <p>Get involved in your city.</p>
-                        <!-- <button>Explore Events →</button> -->
+                <section class="reveal-left">
+                    <div class="custom-card" style="height: 245px;">
+                        <picture>
+                            <!-- Image for smaller screens (up to 768px) -->
+                            <source srcset="./images/community_big.png" media="(max-width: 768px)">
+                            <!-- Default image for larger screens -->
+                            <img src="./images/community_big.png" alt="Team Access" class="custom-img">
+                        </picture>
+                        <div class="overlay">
+                            <h2>Community Events</h2>
+                            <p>Get involved in your city.</p>
+                            <!-- <button>Explore Events →</button> -->
+                        </div>
                     </div>
-                </div>
                 </section>
-                <section class="reveal-top"> 
-                <div class="custom-card mt-3" style="height: 245px;">
-                    <video class="custom-video" autoplay>
-                        <source src="./images/live.mp4" type="video/mp4">
-                        Your browser does not support videos.
-                    </video>
-                    <div class="overlay">
-                        <h2>Watch Live</h2>
-                        <p>Join us for a live experience.</p>
-                        <!-- <button>Watch Now →</button> -->
+                <section class="reveal-top">
+                    <div class="custom-card mt-3" style="height: 245px;">
+                        <video class="custom-video" id="jcam-video" autoplay muted playsinline>
+                            <source src="./images/JCAM.mp4" type="video/mp4">
+                            Your browser does not support videos.
+                        </video>
+                        <div class="overlay">
+                            <h2>Watch Live</h2>
+                            <p>Join us for a live experience.</p>
+                            <!-- <button>Watch Now →</button> -->
+                            <button class="mute-toggle" id="jcam-mute-button">
+                                <span id="jcam-mute-icon">🔇</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
                 </section>
+
+                <script>
+                    const jcamVideo = document.getElementById('jcam-video');
+                    const jcamMuteButton = document.getElementById('jcam-mute-button');
+                    const jcamMuteIcon = document.getElementById('jcam-mute-icon');
+
+                    // Ensure video starts muted
+                    jcamVideo.muted = true;
+
+                    jcamMuteButton.addEventListener('click', () => {
+                        if (jcamVideo.muted) {
+                            jcamVideo.muted = false;
+                            jcamMuteIcon.textContent = '🔊'; // Unmuted Icon
+                        } else {
+                            jcamVideo.muted = true;
+                            jcamMuteIcon.textContent = '🔇'; // Muted Icon
+                        }
+                    });
+
+                </script>
             </div>
 
             <!-- Large Image (Spans 2 rows) -->
             <div class="col-md-6">
-                <section class="reveal-bottom"> 
-                <div class="custom-card" style="height: 500px;">
-                    <img src="./images/gathering.avif" alt="Special Gathering" class="custom-img">
-                    <div class="overlay">
-                        <h2>Special Gathering</h2>
-                        <p>Be a part of something great.</p>
-                        <!-- <button>Learn More →</button> -->
+                <section class="reveal-bottom">
+                    <div class="custom-card" style="height: 500px;">
+                        <img src="./images/gathering.avif" alt="Special Gathering" class="custom-img">
+                        <div class="overlay">
+                            <h2>Special Gathering</h2>
+                            <p>Be a part of something great.</p>
+                            <!-- <button>Learn More →</button> -->
+                        </div>
                     </div>
-                </div>
                 </section>
             </div>
         </div>
