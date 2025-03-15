@@ -693,6 +693,113 @@
 
 
 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.church-page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+.church-schedule-wrapper {
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.church-schedule-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #5A2D82;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.church-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.church-thead .church-th {
+    background-color: #5A2D82;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+.church-table-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.church-td {
+    padding: 12px;
+    color: #333;
+    text-align: left;
+}
+
+.church-event-content {
+    display: inline-block;
+    background-color: #F0EBF8;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.church-tbody .church-table-row:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .church-table, .church-thead, .church-th, .church-tbody, .church-td, .church-table-row { 
+        display: block; 
+        width: 100%;
+    }
+
+    .church-thead { 
+        display: none; 
+    }
+
+    .church-table-row {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    .church-td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        font-weight: 500;
+    }
+
+    .church-td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #5A2D82;
+    }
+}
+
+
+
+
+
+
+
 
 
 
